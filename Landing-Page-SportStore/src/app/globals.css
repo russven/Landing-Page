@@ -1,0 +1,226 @@
+/* global.css */
+
+/* Fuente principal */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
+}
+
+/* Sección de héroe */
+.hero {
+  background-image: url('/fondo.jpg');
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  text-align: center;
+  padding: 100px 0;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Botón llamativo */
+.button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 15px 30px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.2s;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #0056b2;
+  transform: scale(1.1);
+}
+
+/* Navegación */
+nav ul {
+  display: flex; /* Alinear los elementos en fila */
+  justify-content: center; /* Centrar los enlaces */
+  align-items: center; /* Alinear verticalmente */
+  list-style: none; /* Eliminar viñetas */
+  padding: 0;
+  margin: 0;
+}
+
+nav li {
+  margin: 0 15px; /* Espaciado entre los enlaces */
+}
+
+nav a {
+  text-decoration: none; /* Sin subrayado */
+  color: #ffffff; /* Texto blanco */
+  font-size: 1.1rem; /* Tamaño de fuente */
+  font-weight: bold; /* Negrita */
+  padding: 10px 0; /* Espaciado interno */
+  border-bottom: 2px solid transparent; /* Línea decorativa oculta */
+  transition: border-color 0.3s ease, color 0.3s ease; /* Transición suave */
+}
+
+nav a:hover {
+  color: #ff5733; /* Cambiar color al naranja del diseño */
+  border-bottom: 2px solid #ff5733; /* Mostrar la línea decorativa */
+}
+
+/* Header */
+header {
+  background-color: #007bff; /* Fondo azul */
+  padding: 15px 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  font-size: 2rem; /* Tamaño grande del título */
+  color: #ff5733; /* Naranja llamativo */
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Sombra para destacar */
+  margin: 0;
+}
+
+/* Secciones de contenido */
+.section {
+  padding: 50px 0;
+}
+
+/* Contenedores */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Títulos */
+h1 {
+  font-size: 3rem;
+  color: #ff5733;
+  text-align: center;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  margin-top: 20px;
+}
+
+h2 {
+  font-size: 2rem;
+  color: #007bff;
+  text-align: center;
+  text-transform: uppercase;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  border-bottom: 2px solid #007bff;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+h3 {
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Cards de productos */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
+}
+
+.card img {
+  width: 100%; /* Imagen ocupa el ancho de la tarjeta */
+  height: 200px; /* Altura fija */
+  object-fit: cover; /* Ocupa todo el espacio sin deformarse */
+  transition: transform 0.3s ease; /* Transición suave al hover */
+  z-index: 1; /* Debajo de la etiqueta */
+}
+
+/* Etiqueta "Offer" */
+.card .offer {
+  position: absolute; /* Asegura que se coloque en relación con la tarjeta */
+  top: 10px; /* Ajusta la posición superior */
+  right: 10px; /* Ajusta la posición derecha */
+  background-color: #ff5733; /* Naranja llamativo */
+  color: #fff; /* Texto blanco */
+  padding: 5px 10px; /* Espaciado interno */
+  border-radius: 5px; /* Bordes redondeados */
+  font-size: 0.8em; /* Tamaño de fuente */
+  font-weight: bold; /* Negrita */
+  z-index: 2; /* Siempre encima de la imagen */
+  pointer-events: none; /* Asegura que no interfiera con el hover */
+}
+
+.card:hover img {
+  transform: scale(1.05);
+}
+
+.card button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.card button:hover {
+  background-color: #0056b2;
+}
+
+/* Footer */
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 30px;
+}
+/* Estilo para los enlaces "Inicio" y "Productos" */
+nav a {
+  text-decoration: none; /* Sin subrayado */
+  color: #ffffff; /* Texto blanco */
+  background-color: #007bff; /* Fondo azul */
+  padding: 10px 15px; /* Espaciado interno */
+  border-radius: 5px; /* Bordes redondeados */
+  margin-right: 10px; /* Separación entre enlaces */
+  font-size: 1rem; /* Tamaño del texto */
+  font-weight: bold; /* Negrita */
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Transición suave */
+}
+
+nav a:hover {
+  background-color: #0056b3; /* Fondo azul más oscuro al pasar el mouse */
+  transform: scale(1.1); /* Efecto de zoom */
+}
