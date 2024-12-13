@@ -48,7 +48,6 @@ El proyecto utiliza **Next.js** para la creación de interfaces rápidas y escal
 
 ---
 
-## 🧑‍💻 **Cómo Instalar y Ejecutar el Proyecto**
 
 
 
